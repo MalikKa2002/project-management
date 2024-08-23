@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Project Management</h1>
+        <form id="createProjectForm">
+            <input type="text" id="projectName" placeholder="Project Name">
+            <input type="text" id="projectSummary" placeholder="Project Summary">
+            <input type="text" id="managerName" placeholder="Manager Name">
+            <input type="email" id="managerEmail" placeholder="Manager Email">
+            <label for="startDate">Start Date:</label>
+            <input type="date" id="startDate" name="startDate">  
+            <div id="teamMembers">
+                <div class="requierdteamMember">
+                    <label for="teamMemberName">Name:</label>
+                    <input type="text" class="teamMemberName" name="teamMemberName[]">
+                    <label for="teamMemberEmail">Email:</label>
+                    <input type="email" class="teamMemberEmail" name="teamMemberEmail[]">
+                    <label for="teamMemberRole">Role:</label>
+                    <input type="text" class="teamMemberRole" name="teamMemberRole[]">
+                </div>
+              
+            </div>
+            <button type="button" id="addTeamMember">Add Member</button>
+
+            <button type="submit">Create Project</button>
+        </form>
+        <div id="sortButtons">
+            <button id="sortByName">Sort by Project Name</button>
+            <button id="sortByManager">Sort by Manager Name</button>
+            <button id="sortByDate">Sort by Start Date</button>
+        </div>
+        <div id="projectList"></div>
+    </div>
+
+    <div class="pop_up">
+        <span class="close_pop_up">&times;</span>
+        <input type="text" id="searchField" placeholder="type to search images...">
+
+        <div class="gallery" id="gallery"></div>
+
+        <button id="loadMore">Load More</button>
+
+    </div>
+    <!--modal when click image -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modalImage" src="" alt="">
+            <div class="details">
+                <strong id="modalTitle"></strong>
+                <p id="modalDescription"></p>
+                <p id="modalLikes"></p>
+                <button type="button" id="addtoproject" class="">add to my project</button>
+            </div>
+        </div>
+    </div>
+
+    <!--modal for the project images  -->
+    <div id="viewprojectImages" class="viewmodal">
+        <div class="viewmodal-content">
+            <span class="viewclose">&times;</span>
+            <div class="galleryOfTheProject" id="galleryOfTheProject">
+                <!-- <strong id="viewmodalTitle"></strong>
+                <p id="viewmodalDescription"></p>
+                <p id="viewmodalLikes"></p>
+                <button type="button" id="delete">delete</button>   -->
+            </div>
+        </div>
+    </div>
+
+
+<!--modal for the project edit  -->
+    <div id="editmodalid" class="editmodal">
+        <div class="editmodal-content">
+            <span class="closeeditmodal">&times;</span>
+            <div id="detailseditmodal">
+                <div class="editedProject-item">
+                    <div>
+                        <label>Name:</label>
+                        <input type="text" id="editedProjectName" value="">
+                    </div>
+                    <div>
+                        <label>Summary:</label>
+                        <input type="text" id="editedProjectSummary" value="">
+                    </div>
+                    <div>
+                        <label for="startDate">Start Date:</label>
+                        <input type="date" id="editedStartDate" name="startDate" value=""> 
+                    </div>
+                    
+                    <div class="members"></div>
+                 </div>
+            </div>
+            <button id="submit_edit">submit</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

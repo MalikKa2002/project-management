@@ -1,0 +1,16 @@
+{
+  "name": "project-management",
+  "version": "1.0.0",
+  "description": "Project Management Application",
+  "main": "server/app.js",
+  "scripts": {
+    "start": "node server/app.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "uuid": "^8.3.2",
+    "yup": "^0.32.9"
+  }
+}
